@@ -18,6 +18,7 @@ function Dashboard(props){
                     Strike
                 </button>
                 <button
+                    onClick={props.handleFoul}
                     className='buttons_foul'
                 >
                     Foul

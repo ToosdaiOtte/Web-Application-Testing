@@ -26,6 +26,15 @@ function Display(){
         }
     }
 
+    const handleFoul = e => {
+        e.preventDefault();
+        if(strikeCount === 0){
+            return setStrikeCount(addStrikeCount(strikeCount))
+        } else if(strikeCount === 1){
+            return setStrikeCount(2)
+        } 
+    }
+
 
     return(
         <div className='container'>
@@ -55,7 +64,8 @@ function Display(){
             </section>
             <Dashboard 
                 handleBallCount={handleBallCount} 
-                handleStrikeCount={handleStrikeCount} 
+                handleStrikeCount={handleStrikeCount}
+                handleFoul={handleFoul} 
             />
         </div>
     );

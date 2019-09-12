@@ -24,9 +24,16 @@ function Dashboard(props){
                     Foul
                 </button>
                 <button
-                    className='hit'
+                    onClick={props.handleHomeHit}
+                    className='home_hit'
                 >
-                    Hit
+                    Home Hit
+                </button>
+                <button
+                    onClick={props.handleAwayHit}
+                    className='away_hit'
+                >
+                    Away Hit
                 </button>
             </div>
         </section>
